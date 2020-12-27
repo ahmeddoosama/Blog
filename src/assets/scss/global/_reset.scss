@@ -1,0 +1,59 @@
+// desc: 'Contain Utilities styles'
+
+// Utilities Variables
+@import './colors';
+@import './variables';
+
+
+
+/***
+*
+====================================================================
+    Global Settings
+====================================================================
+*
+***/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+}
+
+.container {
+    padding: 0 30px;
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    &:hover {
+        text-decoration: none;
+    }
+}
