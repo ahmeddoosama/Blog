@@ -19,6 +19,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+/* imports blog-cards Variables and colors */
+@import '../assets/scss/global/colors';
+@import '../assets/scss/global/variables';
+
 .card {
     width: 33%;
     padding: 30px 10px 0;
