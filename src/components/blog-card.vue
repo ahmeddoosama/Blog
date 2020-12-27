@@ -1,20 +1,31 @@
 <template>
 <div class="card">
     <div class="card__img">
-        <img src="" alt="">
+        <div class="ratio-content">
+            <img :src="data.image" alt="image">
+        </div>
     </div>
 
     <div class="card__content">
-        <h2 class="card__title"></h2>
-        <p class="card__summry"></p>
-        <a class="card__btn" href=""></a>
+        <h2 class="card__title">
+            {{ data.title }}
+        </h2>
+        <p class="card__summry">
+            {{ data.summry }}
+        </p>
+        <a class="card__btn" href="#">Continue reading</a>
     </div>
 </div>
 </template>
 
 <script>
 export default {
-    name: 'card'
+    name: 'card',
+    props: {
+        data: {
+            required: true
+        }
+    }
 }
 </script>
 
@@ -28,8 +39,16 @@ export default {
     width: 33%;
     padding: 30px 10px 0;
     .card__img {
+        position: relative;
+        margin-bottom: 15px;
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 66.5%;
+        }
         img {
             width: 100%;
+            min-height: 100%;
             border-radius: 5px;
         }
     }
