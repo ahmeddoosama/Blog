@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1 class="header__title">Blog</h1>
+        <slot></slot>
     </header>
 </template>
 
@@ -40,6 +40,19 @@ header {
         color: $white;
         font-weight: $font-weight-300;
         font-size: 60px;
+    }
+    .back-btn {
+        color: $white;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        padding: 7px 15px;
+        line-height: 1;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
     }
 }
 </style>

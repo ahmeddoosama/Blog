@@ -13,7 +13,10 @@
         <p class="card__summry">
             {{ data.summry }}
         </p>
-        <a class="card__btn" href="#">Continue reading</a>
+
+        <router-link :to="`/blog/${data.id}`" class="card__btn">
+            Continue reading
+        </router-link>
     </div>
 </div>
 </template>
@@ -47,8 +50,6 @@ export default {
             padding-top: 66.5%;
         }
         img {
-            width: 100%;
-            min-height: 100%;
             border-radius: 5px;
         }
     }

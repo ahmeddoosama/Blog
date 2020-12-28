@@ -36,8 +36,6 @@ body {
     padding: 0 30px;
     max-width: 1024px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 ul, ol {
@@ -65,4 +63,8 @@ a {
     left: 0;
     right: 0;
     overflow: hidden;
+    img {
+        width: 100%;
+        min-height: 100%;
+    }
 }
