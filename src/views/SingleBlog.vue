@@ -50,21 +50,41 @@ export default {
 @import "../assets/scss/global/colors";
 @import "../assets/scss/global/variables";
 
-.blog__content {
+.blog {
+    .blog__content {
+    margin-bottom: 30px;
     .blog__img {
+        margin-top: 25px;
         position: relative;
         &::before {
             content: '';
             display: block;
-            padding-top: 30%;
+            padding-top: 35%;
         }
     }
     .blog__title {
+        margin: 20px 0;
         color: $mainColor;
     }
     .blog__text {
         color: $gray;
         font-style: italic;
+        font-size: 20px;
+        font-weight: $font-weight-300;
+        line-height: 1.5;
+    }
+}
+    @media #{$smallDevices} {
+        .header__title {
+            font-size: 30px;
+        }
+        .blog__content {
+            .blog__img {
+                &::before {
+                    padding-top: 100%;
+                }
+            }
+        }
     }
 }
 </style>

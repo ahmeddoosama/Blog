@@ -84,6 +84,9 @@ main {
             line-height: 1;
             margin: 50px auto;
         }
+        @media #{$smallDevices} {
+            display: block;
+        }
     }
 }
 </style>
