@@ -1,9 +1,9 @@
 <template>
   <main>
     <app-header>
-        <h1 class="header__title">
-            Blog
-        </h1>
+      <h1 class="header__title">
+        Blog
+      </h1>
     </app-header>
     <div class="container" v-if="blogs">
       <blog-card v-for="blog in blogs" :key="blog.id" :data="blog"></blog-card>
@@ -31,12 +31,12 @@ export default {
     return {
       blogs: null,
       totalCount: null,
-      page: 1,
+      page: 1
     };
   },
   components: {
     AppHeader,
-    blogCard,
+    blogCard
   },
   mounted() {
     this.getBlogs(this.page);
@@ -45,7 +45,7 @@ export default {
     getBlogs(page) {
       axios
         .get(`http://localhost:3000/blog?_page=${page}&_limit=6`)
-        .then((response) => {
+        .then(response => {
           /* check the blog is empty or not,
          if empty add new response.data
          else concat new response.data with current data*/
@@ -61,8 +61,8 @@ export default {
     loadMore() {
       this.page++;
       this.getBlogs(this.page);
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -73,20 +73,20 @@ export default {
 
 main {
   .container {
-        display: flex;
-        flex-wrap: wrap;
-        .load-more-btn {
-            color: $white;
-            background-color: $mainColor;
-            border: none;
-            padding: 10px 25px;
-            font-size: 18px;
-            line-height: 1;
-            margin: 50px auto;
-        }
-        @media #{$smallDevices} {
-            display: block;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    .load-more-btn {
+      color: $white;
+      background-color: $mainColor;
+      border: none;
+      padding: 10px 25px;
+      font-size: 18px;
+      line-height: 1;
+      margin: 50px auto;
     }
+    @media #{$smallDevices} {
+      display: block;
+    }
+  }
 }
 </style>
