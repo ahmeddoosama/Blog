@@ -62,8 +62,10 @@ export default {
             margin-bottom: 7px;
         }
         .card__summry {
-            margin-top: 0;
-            font-weight: $font-weight-300;
+            font-weight: $font-weight-400;
+            color: $smokeGray;
+            font-size: 16px;
+            margin: 10px 0;
         }
         .card__btn {
             font-size: 14px;
